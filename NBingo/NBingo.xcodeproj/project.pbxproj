@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8B8103327EEE8790024A410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103227EEE8790024A410 /* AppDelegate.swift */; };
+		F8B8103527EEE8790024A410 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103427EEE8790024A410 /* SceneDelegate.swift */; };
+		F8B8103727EEE8790024A410 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103627EEE8790024A410 /* WelcomeViewController.swift */; };
+		F8B8103A27EEE8790024A410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B8103827EEE8790024A410 /* Main.storyboard */; };
+		F8B8103C27EEE87A0024A410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B8103B27EEE87A0024A410 /* Assets.xcassets */; };
+		F8B8103F27EEE87A0024A410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B8103D27EEE87A0024A410 /* LaunchScreen.storyboard */; };
+		F8B8104727EEEB880024A410 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104627EEEB880024A410 /* MainViewController.swift */; };
+		F8B8104927EEEE140024A410 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104827EEEE140024A410 /* BoardViewController.swift */; };
+		F8B8104C27EEF2980024A410 /* BingoBalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104B27EEF2980024A410 /* BingoBalls.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8B8102F27EEE8790024A410 /* NBingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B8103227EEE8790024A410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8B8103427EEE8790024A410 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F8B8103627EEE8790024A410 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F8B8103927EEE8790024A410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8B8103B27EEE87A0024A410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8B8103E27EEE87A0024A410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8B8104027EEE87A0024A410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B8104627EEEB880024A410 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F8B8104827EEEE140024A410 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		F8B8104B27EEF2980024A410 /* BingoBalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBalls.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B8102C27EEE8790024A410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8B8102627EEE8790024A410 = {
+			isa = PBXGroup;
+			children = (
+				F8B8103127EEE8790024A410 /* NBingo */,
+				F8B8103027EEE8790024A410 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B8103027EEE8790024A410 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8102F27EEE8790024A410 /* NBingo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B8103127EEE8790024A410 /* NBingo */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8103227EEE8790024A410 /* AppDelegate.swift */,
+				F8B8103427EEE8790024A410 /* SceneDelegate.swift */,
+				F8B8104D27EEF29F0024A410 /* Model */,
+				F8B8104A27EEEE6F0024A410 /* Source */,
+				F8B8103827EEE8790024A410 /* Main.storyboard */,
+				F8B8103B27EEE87A0024A410 /* Assets.xcassets */,
+				F8B8103D27EEE87A0024A410 /* LaunchScreen.storyboard */,
+				F8B8104027EEE87A0024A410 /* Info.plist */,
+			);
+			path = NBingo;
+			sourceTree = "<group>";
+		};
+		F8B8104A27EEEE6F0024A410 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8103627EEE8790024A410 /* WelcomeViewController.swift */,
+				F8B8104827EEEE140024A410 /* BoardViewController.swift */,
+				F8B8104627EEEB880024A410 /* MainViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F8B8104D27EEF29F0024A410 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8104B27EEF2980024A410 /* BingoBalls.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B8102E27EEE8790024A410 /* NBingo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B8104327EEE87A0024A410 /* Build configuration list for PBXNativeTarget "NBingo" */;
+			buildPhases = (
+				F8B8102B27EEE8790024A410 /* Sources */,
+				F8B8102C27EEE8790024A410 /* Frameworks */,
+				F8B8102D27EEE8790024A410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NBingo;
+			productName = NBingo;
+			productReference = F8B8102F27EEE8790024A410 /* NBingo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B8102727EEE8790024A410 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Anish;
+				TargetAttributes = {
+					F8B8102E27EEE8790024A410 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = F8B8102A27EEE8790024A410 /* Build configuration list for PBXProject "NBingo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8B8102627EEE8790024A410;
+			productRefGroup = F8B8103027EEE8790024A410 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B8102E27EEE8790024A410 /* NBingo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8B8102D27EEE8790024A410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B8103F27EEE87A0024A410 /* LaunchScreen.storyboard in Resources */,
+				F8B8103C27EEE87A0024A410 /* Assets.xcassets in Resources */,
+				F8B8103A27EEE8790024A410 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B8102B27EEE8790024A410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B8103727EEE8790024A410 /* WelcomeViewController.swift in Sources */,
+				F8B8103327EEE8790024A410 /* AppDelegate.swift in Sources */,
+				F8B8104C27EEF2980024A410 /* BingoBalls.swift in Sources */,
+				F8B8103527EEE8790024A410 /* SceneDelegate.swift in Sources */,
+				F8B8104727EEEB880024A410 /* MainViewController.swift in Sources */,
+				F8B8104927EEEE140024A410 /* BoardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8B8103827EEE8790024A410 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B8103927EEE8790024A410 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8B8103D27EEE87A0024A410 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B8103E27EEE87A0024A410 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8B8104127EEE87A0024A410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8B8104227EEE87A0024A410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8B8104427EEE87A0024A410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBingo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anish.NBingo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8B8104527EEE87A0024A410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NBingo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anish.NBingo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B8102A27EEE8790024A410 /* Build configuration list for PBXProject "NBingo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B8104127EEE87A0024A410 /* Debug */,
+				F8B8104227EEE87A0024A410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B8104327EEE87A0024A410 /* Build configuration list for PBXNativeTarget "NBingo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B8104427EEE87A0024A410 /* Debug */,
+				F8B8104527EEE87A0024A410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B8102727EEE8790024A410 /* Project object */;
+}
