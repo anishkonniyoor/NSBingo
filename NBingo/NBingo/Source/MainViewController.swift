@@ -9,13 +9,16 @@
 import UIKit
 
 class MainViewController: UIViewController {
-        enum Constants {
-        static let keyCount = 15
-        static let rollingMinTime = 10
-        static let rollingMaxTime = 30
+    enum Constants {
+        static let keyCount = 5
+        static let recentBalls = 5
+        static let recentText = "Recent Numbers"
+        static let showAlert = true
     }
     
-    var balls = [Ball]()
+    var bingoBalls: [Ball] = []
+    
+    @IBOutlet private weak var recentLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +41,23 @@ class MainViewController: UIViewController {
 
 private extension MainViewController {
     @IBAction private func rollTapped(sender: UIButton) {
-        let selectedBall = balls.randomElement
+        guard let selectedBall = bingoBalls.remainingBalls.randomElement(),
+            bingoBalls.selectBall(ball: selectedBall) else { return }//TODO: Use wheel to pick the ball
         
-        print("value \(balls.randomElement()?.displayText ?? "")")
+        let completion: () -> () = {
+            self.updateView()
+            print("value \(selectedBall.displayText)")
+        }
         
+        guard Constants.showAlert else {
+            completion()
+            return
+        }
+        
+        let alert = UIAlertController(title: selectedBall.displayText, message: nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        present(alert, animated: true, completion: completion)
     }
     
     @IBAction private func showBoardTapped(sender: UIButton) {
@@ -59,9 +75,29 @@ private extension MainViewController {
 
 private extension MainViewController {
     func setup() {
-        
-        balls = loadBalls()
-        print("\(balls.map { $0.displayText })")
+        if bingoBalls.isEmpty {
+            bingoBalls = loadBalls()
+        }
+        updateView()
+    }
+    
+    func updateView() {
+        updateRecentBalls()
+    }
+    func updateRecentBalls() {
+        let recentText: String  = {
+            let recentBalls = bingoBalls.selectedBalls.sorted {
+                ($0.selectedIndex ?? 0) > ($1.selectedIndex ?? 0)
+            }.prefix(Constants.recentBalls)
+            guard !recentBalls.isEmpty else {
+                return Constants.recentText
+            }
+            
+            return recentBalls.map { $0.displayText }.joined(separator: ", ")
+        }()
+
+        recentLabel.text = recentText
+        recentLabel.backgroundColor = bingoBalls.remainingBalls.isEmpty ? .green : .gray
     }
     
     func loadBalls() -> [Ball] {

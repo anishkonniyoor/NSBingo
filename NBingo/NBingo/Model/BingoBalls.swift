@@ -9,8 +9,8 @@
 import Foundation
 
 struct Ball {
-    var colKey: String
-    var rowValue: Int
+    let colKey: String
+    let rowValue: Int
     
     var selectedIndex: Int?
     
@@ -22,18 +22,52 @@ struct Ball {
 }
 
 extension Ball {
+    var isSelected: Bool {
+        selectedIndex != nil
+    }
+    
     var displayText: String {
         "\(colKey)\(rowValue)"
+    }
+    
+    func updated(selectedIndex: Int?) -> Ball {
+        var newBall = self
+        newBall.selectedIndex = selectedIndex
+        return newBall
+    }
+}
+
+extension Ball: Hashable {
+    static func ==(lhs: Ball, rhs: Ball) -> Bool {
+        (lhs.rowValue == rhs.rowValue) && (lhs.colKey == rhs.colKey)
     }
 }
 
 extension Collection where Element == Ball {
     var remainingBalls: [Ball] {
-        filter { $0.selectedIndex == nil}
+        filter { !$0.isSelected }
+    }
+    
+    var selectedBalls: [Ball] {
+        filter { $0.isSelected }
     }
     
     var currentIndex: Int {
         compactMap { $0.selectedIndex }.max() ?? 0
+    }
+}
+
+extension MutableCollection where Element == Ball {
+    mutating func selectBall(ball: Ball) -> Bool {
+        guard let index = firstIndex(of: ball), !ball.isSelected else {
+            return false
+        }
+        let nextIndex = currentIndex + 1
+        guard nextIndex <= count else { return false }
+        
+        self[index] = ball.updated(selectedIndex: nextIndex)
+        
+        return true
     }
 }
 
