@@ -16,10 +16,13 @@ class MainViewController: UIViewController {
         static let showAlert = true
     }
     
-    var bingoBalls: [Ball] = []
-    
     @IBOutlet private weak var recentLabel: UILabel!
     
+    var bingoBalls: [Ball] = []
+    
+    lazy var textToSpeechManager: TextToSpeechManager = {
+        TextToSpeechManager()
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -43,6 +46,8 @@ private extension MainViewController {
     @IBAction private func rollTapped(sender: UIButton) {
         guard let selectedBall = bingoBalls.remainingBalls.randomElement(),
             bingoBalls.selectBall(ball: selectedBall) else { return }//TODO: Use wheel to pick the ball
+        
+        textToSpeechManager.speak(speechText: selectedBall.displayText)
         
         let completion: () -> () = {
             self.updateView()
@@ -99,7 +104,9 @@ private extension MainViewController {
         recentLabel.text = recentText
         recentLabel.backgroundColor = bingoBalls.remainingBalls.isEmpty ? .green : .gray
     }
-    
+}
+
+private extension MainViewController {
     func loadBalls() -> [Ball] {
         let keys = ["B", "I", "N", "G", "O"]
         var index = 1

@@ -16,6 +16,7 @@
 		F8B8104727EEEB880024A410 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104627EEEB880024A410 /* MainViewController.swift */; };
 		F8B8104927EEEE140024A410 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104827EEEE140024A410 /* BoardViewController.swift */; };
 		F8B8104C27EEF2980024A410 /* BingoBalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8104B27EEF2980024A410 /* BingoBalls.swift */; };
+		F8B8107227F296340024A410 /* TextToSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8107127F296340024A410 /* TextToSpeechManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F8B8104627EEEB880024A410 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F8B8104827EEEE140024A410 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		F8B8104B27EEF2980024A410 /* BingoBalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBalls.swift; sourceTree = "<group>"; };
+		F8B8107127F296340024A410 /* TextToSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 			children = (
 				F8B8103227EEE8790024A410 /* AppDelegate.swift */,
 				F8B8103427EEE8790024A410 /* SceneDelegate.swift */,
-				F8B8104D27EEF29F0024A410 /* Model */,
 				F8B8104A27EEEE6F0024A410 /* Source */,
 				F8B8103827EEE8790024A410 /* Main.storyboard */,
 				F8B8103B27EEE87A0024A410 /* Assets.xcassets */,
@@ -77,6 +78,8 @@
 		F8B8104A27EEEE6F0024A410 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8B8107027F295F20024A410 /* Utilities */,
+				F8B8104D27EEF29F0024A410 /* Model */,
 				F8B8103627EEE8790024A410 /* WelcomeViewController.swift */,
 				F8B8104827EEEE140024A410 /* BoardViewController.swift */,
 				F8B8104627EEEB880024A410 /* MainViewController.swift */,
@@ -90,6 +93,14 @@
 				F8B8104B27EEF2980024A410 /* BingoBalls.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B8107027F295F20024A410 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8107127F296340024A410 /* TextToSpeechManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				F8B8103727EEE8790024A410 /* WelcomeViewController.swift in Sources */,
 				F8B8103327EEE8790024A410 /* AppDelegate.swift in Sources */,
 				F8B8104C27EEF2980024A410 /* BingoBalls.swift in Sources */,
+				F8B8107227F296340024A410 /* TextToSpeechManager.swift in Sources */,
 				F8B8103527EEE8790024A410 /* SceneDelegate.swift in Sources */,
 				F8B8104727EEEB880024A410 /* MainViewController.swift in Sources */,
 				F8B8104927EEEE140024A410 /* BoardViewController.swift in Sources */,
