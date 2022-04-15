@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F8925AFA2809207A006243A1 /* BoardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8925AF92809207A006243A1 /* BoardItemCell.swift */; };
+		F8925AFC2809E7F2006243A1 /* BallsFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8925AFB2809E7F2006243A1 /* BallsFileManager.swift */; };
 		F8B8103327EEE8790024A410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103227EEE8790024A410 /* AppDelegate.swift */; };
 		F8B8103527EEE8790024A410 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103427EEE8790024A410 /* SceneDelegate.swift */; };
 		F8B8103727EEE8790024A410 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8103627EEE8790024A410 /* WelcomeViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		F8925AF92809207A006243A1 /* BoardItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItemCell.swift; sourceTree = "<group>"; };
+		F8925AFB2809E7F2006243A1 /* BallsFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsFileManager.swift; sourceTree = "<group>"; };
 		F8B8102F27EEE8790024A410 /* NBingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B8103227EEE8790024A410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B8103427EEE8790024A410 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B8107127F296340024A410 /* TextToSpeechManager.swift */,
+				F8925AFB2809E7F2006243A1 /* BallsFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				F8B8104C27EEF2980024A410 /* BingoBalls.swift in Sources */,
 				F8B8107227F296340024A410 /* TextToSpeechManager.swift in Sources */,
 				F8B8103527EEE8790024A410 /* SceneDelegate.swift in Sources */,
+				F8925AFC2809E7F2006243A1 /* BallsFileManager.swift in Sources */,
 				F8B8104727EEEB880024A410 /* MainViewController.swift in Sources */,
 				F8B8104927EEEE140024A410 /* BoardViewController.swift in Sources */,
 			);

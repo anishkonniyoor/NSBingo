@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     }
     
     @IBOutlet private weak var recentLabel: UILabel!
+    @IBOutlet private weak var rollButton: UIButton!
     
     var bingoBalls: [Ball] = []
     
@@ -43,11 +44,22 @@ class MainViewController: UIViewController {
 }
 
 private extension MainViewController {
+    func gameFinished() {
+        BallsFileManager.saveBalls(balls: [])
+    }
+    
     @IBAction private func rollTapped(sender: UIButton) {
         guard let selectedBall = bingoBalls.remaining.randomElement(),
             bingoBalls.selectBall(ball: selectedBall) else { return }//TODO: Use wheel to pick the ball
         
         textToSpeechManager.speak(speechText: selectedBall.displayText)
+        
+        
+        BallsFileManager.saveBalls(balls: bingoBalls)
+        rollButton.isHidden = bingoBalls.remaining.isEmpty
+        if bingoBalls.remaining.isEmpty {
+            gameFinished()
+        }
         
         let completion: () -> () = {
             self.updateView()
@@ -84,6 +96,7 @@ private extension MainViewController {
         if bingoBalls.isEmpty {
             bingoBalls = loadBalls()
         }
+        
         updateView()
     }
     

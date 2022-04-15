@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Ball {
+struct Ball: Codable {
     let colKey: String
     let rowValue: Int
     
@@ -87,7 +87,6 @@ extension MutableCollection where Element == Ball {
         guard nextIndex <= count else { return false }
         
         self[index] = ball.updated(selectedIndex: nextIndex)
-        
         return true
     }
 }

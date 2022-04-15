@@ -21,7 +21,7 @@ extension BoardViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard boardItems.count > section else { return 0}
+        guard boardItems.count > section else { return 0 }
         return boardItems[section].items.count
     }
     

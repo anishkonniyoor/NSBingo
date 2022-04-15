@@ -122,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="recentLabel" destination="Vfz-W9-zgW" id="O0g-Ud-T8W"/>
+                        <outlet property="rollButton" destination="Ybv-4U-GN2" id="WyM-RM-zcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBg-JM-14k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

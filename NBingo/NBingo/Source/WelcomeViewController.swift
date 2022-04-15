@@ -18,9 +18,10 @@ class WelcomeViewController: UIViewController {
 }
 
 extension WelcomeViewController {
-    private func routeToGame() {
+    private func routeToGame(balls: [Ball]? = nil) {
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let mainViewController = storyBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        mainViewController.bingoBalls = balls ?? []
         navigationController?.pushViewController(mainViewController, animated: true)
     }
     
@@ -31,7 +32,7 @@ extension WelcomeViewController {
     
     @IBAction private func openPreviousTapped(sender: UIButton) {
         print("Open Previous")
-        routeToGame()
+        routeToGame(balls: BallsFileManager.fetchBalls())
     }
 }
 
