@@ -43,17 +43,38 @@ extension Ball: Hashable {
     }
 }
 
+extension Ball {
+    func toBingoBoardItem() -> BingoBoardItem {
+        BingoBoardItem(displayText: displayText, isSelected: isSelected)
+    }
+}
+
 extension Collection where Element == Ball {
-    var remainingBalls: [Ball] {
+    var remaining: [Ball] {
         filter { !$0.isSelected }
     }
     
-    var selectedBalls: [Ball] {
+    var selected: [Ball] {
         filter { $0.isSelected }
     }
     
     var currentIndex: Int {
         compactMap { $0.selectedIndex }.max() ?? 0
+    }
+    
+    func toBingoBoardModel() -> [BingoBoardModel] {
+        var items = [BingoBoardModel]()
+        for ball in self {
+            guard let index = items.firstIndex(where: { $0.sectionTitle == ball.colKey }) else {
+                items.append( BingoBoardModel(sectionTitle: ball.colKey, items: [ball.toBingoBoardItem()]) )
+                continue
+            }
+            
+            let boardItems = items[index].items + [ball.toBingoBoardItem()]
+            items[index] = BingoBoardModel(sectionTitle: ball.colKey, items: boardItems)
+        }
+        
+        return items
     }
 }
 
@@ -71,3 +92,12 @@ extension MutableCollection where Element == Ball {
     }
 }
 
+struct BingoBoardModel {
+    let sectionTitle: String
+    let items: [BingoBoardItem]
+}
+
+struct BingoBoardItem {
+    let displayText: String
+    let isSelected: Bool
+}

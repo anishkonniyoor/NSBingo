@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     enum Constants {
-        static let keyCount = 5
+        static let keyCount = 15
         static let recentBalls = 5
         static let recentText = "Recent Numbers"
         static let showAlert = true
@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
 
 private extension MainViewController {
     @IBAction private func rollTapped(sender: UIButton) {
-        guard let selectedBall = bingoBalls.remainingBalls.randomElement(),
+        guard let selectedBall = bingoBalls.remaining.randomElement(),
             bingoBalls.selectBall(ball: selectedBall) else { return }//TODO: Use wheel to pick the ball
         
         textToSpeechManager.speak(speechText: selectedBall.displayText)
@@ -69,6 +69,7 @@ private extension MainViewController {
         print("Show Board")
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let boardViewController = storyBoard.instantiateViewController(withIdentifier: "BoardViewController") as! BoardViewController
+        boardViewController.boardItems = bingoBalls.selected.toBingoBoardModel()
         navigationController?.pushViewController(boardViewController, animated: true)
     }
     
@@ -89,9 +90,10 @@ private extension MainViewController {
     func updateView() {
         updateRecentBalls()
     }
+    
     func updateRecentBalls() {
         let recentText: String  = {
-            let recentBalls = bingoBalls.selectedBalls.sorted {
+            let recentBalls = bingoBalls.selected.sorted {
                 ($0.selectedIndex ?? 0) > ($1.selectedIndex ?? 0)
             }.prefix(Constants.recentBalls)
             guard !recentBalls.isEmpty else {
@@ -102,7 +104,7 @@ private extension MainViewController {
         }()
 
         recentLabel.text = recentText
-        recentLabel.backgroundColor = bingoBalls.remainingBalls.isEmpty ? .green : .gray
+        recentLabel.backgroundColor = bingoBalls.remaining.isEmpty ? .green : .yellow
     }
 }
 
